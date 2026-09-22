@@ -8,6 +8,12 @@ The project was developed as an undergraduate research project and was accepted 
 
 **Paper:** [ChangeVLN: A Benchmark for Vision-Language Navigation in Changed Environments](https://openreview.net/forum?id=HaTMBqlK1B)
 
+<p align="center">
+  <img src="figures/environment_change.jpg" alt="ChangeVLN changed-environment example" width="900">
+</p>
+
+<p align="center"><em>The instruction, start, and goal stay fixed while an inserted obstacle blocks the original route and forces a detour.</em></p>
+
 ---
 
 ## Motivation
@@ -21,6 +27,10 @@ ChangeVLN introduces controlled environmental changes and evaluates whether a VL
 ---
 
 ## Benchmark Overview
+
+<p align="center">
+  <img src="figures/benchmark_overview.jpg" alt="ChangeVLN benchmark overview" width="900">
+</p>
 
 The benchmark is built on a **NaVILA-based navigation pipeline in Habitat**.
 
@@ -39,6 +49,12 @@ A total of **500 episodes** were used in the final evaluation.
 - Newly executed episodes: **409 episodes**
 - Baseline success: **99 / 500**
 - Obstacle-aware setting success: **104 / 500**
+
+<p align="center">
+  <img src="figures/results_summary.jpg" alt="ChangeVLN experimental results" width="900">
+</p>
+
+<p align="center"><em>Summary of the final comparison between NaVILA and the obstacle-aware instruction setting.</em></p>
 
 ---
 

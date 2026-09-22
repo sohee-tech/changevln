@@ -1,0 +1,472 @@
+---
+# sub500 OAP+Obstacle — 409 new episodes
+# Static obstacle-aware prefix + box obstacle
+BASE_TASK_CONFIG_PATH: habitat_extensions/config/vlnce_task.yaml
+TRAINER_NAME: navila
+ENV_NAME: VLNCEStaticPrefixEnv
+SIMULATOR_GPU_IDS: [0]
+TORCH_GPU_ID: 0
+NUM_ENVIRONMENTS: 1
+EVAL_CKPT_PATH_DIR: ../../navila-llama3-8b-8f
+RESULTS_DIR: eval_out/sub500_oap_traj_v2/
+CONV_TYPE: llama_3
+
+VIDEO_OPTION: []
+VIDEO_DIR: eval_out/sub500_oap_traj_v2/videos/
+
+EVAL:
+    USE_CKPT_CONFIG: false
+    SPLIT: val_unseen
+    EPISODE_COUNT: 409
+    SAVE_RESULTS: true
+
+FIXED_BOX:
+    BOX_SIZE: [0.4, 1.2, 0.4]
+    EPISODE_OBSTACLES:
+        - {episode_id:     20, x:    -8.1257, z:   -16.6128, yaw_deg: 0.0}
+        - {episode_id:     21, x:    -8.1257, z:   -16.6128, yaw_deg: 0.0}
+        - {episode_id:     24, x:     1.8763, z:    -8.6295, yaw_deg: 0.0}
+        - {episode_id:     31, x:    -6.9554, z:    -4.2209, yaw_deg: 0.0}
+        - {episode_id:     33, x:    -6.9554, z:    -4.2209, yaw_deg: 0.0}
+        - {episode_id:     34, x:     1.8691, z:    -8.5463, yaw_deg: 0.0}
+        - {episode_id:     43, x:    10.6280, z:     3.6169, yaw_deg: 0.0}
+        - {episode_id:     44, x:    10.6280, z:     3.6169, yaw_deg: 0.0}
+        - {episode_id:     46, x:     0.0392, z:     4.0739, yaw_deg: 0.0}
+        - {episode_id:     61, x:    21.7418, z:    -1.4498, yaw_deg: 0.0}
+        - {episode_id:     67, x:    -2.3495, z:   -11.5550, yaw_deg: 0.0}
+        - {episode_id:     71, x:    -5.4648, z:     3.2668, yaw_deg: 0.0}
+        - {episode_id:     79, x:     1.8763, z:     2.7751, yaw_deg: 0.0}
+        - {episode_id:     88, x:    11.3916, z:     4.5641, yaw_deg: 0.0}
+        - {episode_id:     92, x:     1.9510, z:    -8.4441, yaw_deg: 0.0}
+        - {episode_id:     97, x:    -0.4976, z:   -16.8700, yaw_deg: 0.0}
+        - {episode_id:     98, x:    -0.4976, z:   -16.8700, yaw_deg: 0.0}
+        - {episode_id:    103, x:   -10.7041, z:    12.6855, yaw_deg: 0.0}
+        - {episode_id:    104, x:   -10.7041, z:    12.6855, yaw_deg: 0.0}
+        - {episode_id:    110, x:    -0.3187, z:     0.4479, yaw_deg: 0.0}
+        - {episode_id:    111, x:    -0.3187, z:     0.4479, yaw_deg: 0.0}
+        - {episode_id:    117, x:    29.1443, z:    -1.6208, yaw_deg: 0.0}
+        - {episode_id:    143, x:     1.3642, z:   -16.6566, yaw_deg: 0.0}
+        - {episode_id:    153, x:    -2.3800, z:   -11.5386, yaw_deg: 0.0}
+        - {episode_id:    159, x:    14.7244, z:     0.8978, yaw_deg: 0.0}
+        - {episode_id:    167, x:    10.7462, z:     6.9036, yaw_deg: 0.0}
+        - {episode_id:    171, x:    -2.4001, z:    -1.3435, yaw_deg: 0.0}
+        - {episode_id:    172, x:     2.0737, z:    -3.0576, yaw_deg: 0.0}
+        - {episode_id:    173, x:     2.0737, z:    -3.0576, yaw_deg: 0.0}
+        - {episode_id:    199, x:    -4.8693, z:    -0.6976, yaw_deg: 0.0}
+        - {episode_id:    202, x:     0.6776, z:     7.7317, yaw_deg: 0.0}
+        - {episode_id:    208, x:    -9.5626, z:   -22.6655, yaw_deg: 0.0}
+        - {episode_id:    212, x:     4.4415, z:     7.8303, yaw_deg: 0.0}
+        - {episode_id:    214, x:     1.7924, z:     2.7383, yaw_deg: 0.0}
+        - {episode_id:    222, x:     3.7469, z:     5.5371, yaw_deg: 0.0}
+        - {episode_id:    228, x:    -2.2200, z:     8.6399, yaw_deg: 0.0}
+        - {episode_id:    229, x:    -0.0270, z:     0.1647, yaw_deg: 0.0}
+        - {episode_id:    230, x:    -0.0270, z:     0.1647, yaw_deg: 0.0}
+        - {episode_id:    232, x:     2.6290, z:     1.5146, yaw_deg: 0.0}
+        - {episode_id:    233, x:     2.6290, z:     1.5146, yaw_deg: 0.0}
+        - {episode_id:    244, x:    -3.7865, z:     5.6499, yaw_deg: 0.0}
+        - {episode_id:    256, x:     1.8691, z:    -8.5463, yaw_deg: 0.0}
+        - {episode_id:    258, x:     1.8691, z:    -8.5463, yaw_deg: 0.0}
+        - {episode_id:    260, x:     6.2778, z:    -9.1623, yaw_deg: 0.0}
+        - {episode_id:    264, x:    21.7635, z:    -1.4600, yaw_deg: 0.0}
+        - {episode_id:    272, x:    17.8889, z:    -0.5141, yaw_deg: 0.0}
+        - {episode_id:    277, x:    10.4323, z:     3.3227, yaw_deg: 0.0}
+        - {episode_id:    281, x:     3.6665, z:     1.8661, yaw_deg: 0.0}
+        - {episode_id:    282, x:     3.6665, z:     1.8661, yaw_deg: 0.0}
+        - {episode_id:    283, x:    -0.0390, z:     0.3182, yaw_deg: 0.0}
+        - {episode_id:    284, x:    -0.0390, z:     0.3182, yaw_deg: 0.0}
+        - {episode_id:    285, x:    -0.0390, z:     0.3182, yaw_deg: 0.0}
+        - {episode_id:    286, x:    15.5268, z:     9.6116, yaw_deg: 0.0}
+        - {episode_id:    287, x:    15.5268, z:     9.6116, yaw_deg: 0.0}
+        - {episode_id:    288, x:    15.5268, z:     9.6116, yaw_deg: 0.0}
+        - {episode_id:    290, x:    -3.7376, z:    -0.3060, yaw_deg: 0.0}
+        - {episode_id:    295, x:     0.8456, z:     1.9491, yaw_deg: 0.0}
+        - {episode_id:    300, x:     0.7211, z:    -6.6264, yaw_deg: 0.0}
+        - {episode_id:    305, x:    -3.0542, z:    15.4340, yaw_deg: 0.0}
+        - {episode_id:    306, x:    -3.0542, z:    15.4340, yaw_deg: 0.0}
+        - {episode_id:    308, x:     2.4286, z:    -3.7137, yaw_deg: 0.0}
+        - {episode_id:    309, x:     2.4286, z:    -3.7137, yaw_deg: 0.0}
+        - {episode_id:    310, x:     1.3119, z:     0.6484, yaw_deg: 0.0}
+        - {episode_id:    313, x:    -3.9910, z:     0.9265, yaw_deg: 0.0}
+        - {episode_id:    314, x:    -3.9910, z:     0.9265, yaw_deg: 0.0}
+        - {episode_id:    315, x:    -3.9910, z:     0.9265, yaw_deg: 0.0}
+        - {episode_id:    320, x:     0.7012, z:     4.5100, yaw_deg: 0.0}
+        - {episode_id:    325, x:    -1.8334, z:     1.6006, yaw_deg: 0.0}
+        - {episode_id:    331, x:     2.7496, z:    -3.9458, yaw_deg: 0.0}
+        - {episode_id:    332, x:     2.7496, z:    -3.9458, yaw_deg: 0.0}
+        - {episode_id:    335, x:    -6.6483, z:   -18.7085, yaw_deg: 0.0}
+        - {episode_id:    336, x:    -6.6483, z:   -18.7085, yaw_deg: 0.0}
+        - {episode_id:    337, x:     2.5970, z:    -2.8103, yaw_deg: 0.0}
+        - {episode_id:    338, x:     2.5970, z:    -2.8103, yaw_deg: 0.0}
+        - {episode_id:    341, x:    16.2239, z:     9.2303, yaw_deg: 0.0}
+        - {episode_id:    342, x:    16.2239, z:     9.2303, yaw_deg: 0.0}
+        - {episode_id:    345, x:    29.1367, z:    -6.1164, yaw_deg: 0.0}
+        - {episode_id:    346, x:     3.5390, z:     4.3199, yaw_deg: 0.0}
+        - {episode_id:    347, x:     3.5390, z:     4.3199, yaw_deg: 0.0}
+        - {episode_id:    348, x:     3.5390, z:     4.3199, yaw_deg: 0.0}
+        - {episode_id:    351, x:    -2.4205, z:     4.1420, yaw_deg: 0.0}
+        - {episode_id:    356, x:     2.6540, z:    -3.1107, yaw_deg: 0.0}
+        - {episode_id:    375, x:    -1.8280, z:     3.4502, yaw_deg: 0.0}
+        - {episode_id:    377, x:     1.8741, z:    -3.0952, yaw_deg: 0.0}
+        - {episode_id:    378, x:     1.8741, z:    -3.0952, yaw_deg: 0.0}
+        - {episode_id:    389, x:     3.4082, z:     2.1041, yaw_deg: 0.0}
+        - {episode_id:    390, x:     3.4082, z:     2.1041, yaw_deg: 0.0}
+        - {episode_id:    395, x:    16.0446, z:     8.2072, yaw_deg: 0.0}
+        - {episode_id:    403, x:    15.3166, z:     0.3005, yaw_deg: 0.0}
+        - {episode_id:    406, x:     2.7290, z:    -3.9610, yaw_deg: 0.0}
+        - {episode_id:    408, x:     2.7290, z:    -3.9610, yaw_deg: 0.0}
+        - {episode_id:    410, x:     0.3697, z:    -7.7204, yaw_deg: 0.0}
+        - {episode_id:    422, x:    -8.2924, z:     6.3467, yaw_deg: 0.0}
+        - {episode_id:    425, x:     5.3820, z:     8.3659, yaw_deg: 0.0}
+        - {episode_id:    451, x:     2.1290, z:    -2.8630, yaw_deg: 0.0}
+        - {episode_id:    456, x:    -4.8288, z:    12.7903, yaw_deg: 0.0}
+        - {episode_id:    460, x:     0.6359, z:     4.8420, yaw_deg: 0.0}
+        - {episode_id:    461, x:     0.6359, z:     4.8420, yaw_deg: 0.0}
+        - {episode_id:    462, x:     0.6359, z:     4.8420, yaw_deg: 0.0}
+        - {episode_id:    472, x:     2.7147, z:    -3.9965, yaw_deg: 0.0}
+        - {episode_id:    473, x:     2.7147, z:    -3.9965, yaw_deg: 0.0}
+        - {episode_id:    480, x:     1.5809, z:    -2.6668, yaw_deg: 0.0}
+        - {episode_id:    484, x:     3.4681, z:     1.8758, yaw_deg: 0.0}
+        - {episode_id:    490, x:    -6.0725, z:   -21.5752, yaw_deg: 0.0}
+        - {episode_id:    496, x:     2.7715, z:     5.0235, yaw_deg: 0.0}
+        - {episode_id:    510, x:     3.2072, z:     4.3474, yaw_deg: 0.0}
+        - {episode_id:    511, x:     2.2460, z:     6.4036, yaw_deg: 0.0}
+        - {episode_id:    512, x:     2.2460, z:     6.4036, yaw_deg: 0.0}
+        - {episode_id:    518, x:     1.6603, z:    -7.7686, yaw_deg: 0.0}
+        - {episode_id:    519, x:     1.6603, z:    -7.7686, yaw_deg: 0.0}
+        - {episode_id:    526, x:     0.5771, z:     3.4860, yaw_deg: 0.0}
+        - {episode_id:    529, x:     1.8691, z:    -8.5463, yaw_deg: 0.0}
+        - {episode_id:    530, x:     1.8691, z:    -8.5463, yaw_deg: 0.0}
+        - {episode_id:    534, x:     0.6385, z:     0.5316, yaw_deg: 0.0}
+        - {episode_id:    538, x:     0.3915, z:    12.8856, yaw_deg: 0.0}
+        - {episode_id:    548, x:    30.5689, z:     4.0634, yaw_deg: 0.0}
+        - {episode_id:    565, x:     0.9060, z:    -2.6452, yaw_deg: 0.0}
+        - {episode_id:    577, x:    -0.7694, z:   -11.3527, yaw_deg: 0.0}
+        - {episode_id:    581, x:     2.5792, z:    -5.4546, yaw_deg: 0.0}
+        - {episode_id:    588, x:     1.8564, z:    -7.6627, yaw_deg: 0.0}
+        - {episode_id:    592, x:     2.3534, z:    -3.8398, yaw_deg: 0.0}
+        - {episode_id:    593, x:     2.3534, z:    -3.8398, yaw_deg: 0.0}
+        - {episode_id:    599, x:    -1.5455, z:     4.2292, yaw_deg: 0.0}
+        - {episode_id:    608, x:    -6.6068, z:   -18.4605, yaw_deg: 0.0}
+        - {episode_id:    614, x:    -1.7508, z:     4.5802, yaw_deg: 0.0}
+        - {episode_id:    615, x:    -1.7508, z:     4.5802, yaw_deg: 0.0}
+        - {episode_id:    620, x:     0.8793, z:     8.1845, yaw_deg: 0.0}
+        - {episode_id:    623, x:    17.3644, z:     0.4435, yaw_deg: 0.0}
+        - {episode_id:    644, x:    16.6576, z:     3.0571, yaw_deg: 0.0}
+        - {episode_id:    652, x:    -1.5613, z:     4.2433, yaw_deg: 0.0}
+        - {episode_id:    654, x:    -1.5613, z:     4.2433, yaw_deg: 0.0}
+        - {episode_id:    658, x:    -2.1745, z:   -10.0834, yaw_deg: 0.0}
+        - {episode_id:    660, x:    -2.1745, z:   -10.0834, yaw_deg: 0.0}
+        - {episode_id:    661, x:    -0.2549, z:    -1.7619, yaw_deg: 0.0}
+        - {episode_id:    663, x:    -0.2549, z:    -1.7619, yaw_deg: 0.0}
+        - {episode_id:    677, x:     1.2076, z:     6.1917, yaw_deg: 0.0}
+        - {episode_id:    682, x:     1.3736, z:     3.1586, yaw_deg: 0.0}
+        - {episode_id:    687, x:    -1.9883, z:     4.9247, yaw_deg: 0.0}
+        - {episode_id:    689, x:    -3.5133, z:    17.0536, yaw_deg: 0.0}
+        - {episode_id:    690, x:    -3.5133, z:    17.0536, yaw_deg: 0.0}
+        - {episode_id:    695, x:     0.6510, z:     1.8026, yaw_deg: 0.0}
+        - {episode_id:    700, x:    -1.4643, z:   -22.5312, yaw_deg: 0.0}
+        - {episode_id:    701, x:    -1.4643, z:   -22.5312, yaw_deg: 0.0}
+        - {episode_id:    706, x:    -0.3105, z:    -0.2846, yaw_deg: 0.0}
+        - {episode_id:    714, x:     3.6321, z:    -3.8197, yaw_deg: 0.0}
+        - {episode_id:    721, x:     2.9749, z:     4.2730, yaw_deg: 0.0}
+        - {episode_id:    722, x:     2.9749, z:     4.2730, yaw_deg: 0.0}
+        - {episode_id:    725, x:     0.4695, z:     0.5506, yaw_deg: 0.0}
+        - {episode_id:    730, x:    -2.3935, z:     4.1339, yaw_deg: 0.0}
+        - {episode_id:    732, x:    -2.3935, z:     4.1339, yaw_deg: 0.0}
+        - {episode_id:    745, x:     3.4888, z:    -3.8526, yaw_deg: 0.0}
+        - {episode_id:    749, x:    -1.9658, z:    21.6120, yaw_deg: 0.0}
+        - {episode_id:    752, x:   -11.2291, z:    10.6225, yaw_deg: 0.0}
+        - {episode_id:    753, x:   -11.2291, z:    10.6225, yaw_deg: 0.0}
+        - {episode_id:    763, x:     2.8672, z:     2.5160, yaw_deg: 0.0}
+        - {episode_id:    765, x:     2.8672, z:     2.5160, yaw_deg: 0.0}
+        - {episode_id:    772, x:     9.9378, z:     8.4863, yaw_deg: 0.0}
+        - {episode_id:    781, x:     9.3076, z:     7.2046, yaw_deg: 0.0}
+        - {episode_id:    783, x:     9.3076, z:     7.2046, yaw_deg: 0.0}
+        - {episode_id:    784, x:     1.1491, z:    12.7793, yaw_deg: 0.0}
+        - {episode_id:    785, x:     1.1491, z:    12.7793, yaw_deg: 0.0}
+        - {episode_id:    787, x:     1.5261, z:     3.1213, yaw_deg: 0.0}
+        - {episode_id:    788, x:     1.5261, z:     3.1213, yaw_deg: 0.0}
+        - {episode_id:    789, x:     1.5261, z:     3.1213, yaw_deg: 0.0}
+        - {episode_id:    791, x:     2.1351, z:    -6.1636, yaw_deg: 0.0}
+        - {episode_id:    794, x:     0.0621, z:   -16.4926, yaw_deg: 0.0}
+        - {episode_id:    801, x:    15.0817, z:     0.4697, yaw_deg: 0.0}
+        - {episode_id:    802, x:    15.2578, z:     0.3257, yaw_deg: 0.0}
+        - {episode_id:    804, x:    15.2578, z:     0.3257, yaw_deg: 0.0}
+        - {episode_id:    805, x:     2.5772, z:     4.1400, yaw_deg: 0.0}
+        - {episode_id:    809, x:    29.1443, z:    -1.6208, yaw_deg: 0.0}
+        - {episode_id:    810, x:    29.1443, z:    -1.6208, yaw_deg: 0.0}
+        - {episode_id:    815, x:     5.2775, z:    -3.8384, yaw_deg: 0.0}
+        - {episode_id:    832, x:     0.3938, z:     0.8843, yaw_deg: 0.0}
+        - {episode_id:    841, x:    -7.8095, z:     6.2951, yaw_deg: 0.0}
+        - {episode_id:    844, x:    -0.0875, z:    -2.3262, yaw_deg: 0.0}
+        - {episode_id:    845, x:    -0.0875, z:    -2.3262, yaw_deg: 0.0}
+        - {episode_id:    849, x:     8.6622, z:    -3.6927, yaw_deg: 0.0}
+        - {episode_id:    850, x:     2.7592, z:     1.6882, yaw_deg: 0.0}
+        - {episode_id:    851, x:     2.7592, z:     1.6882, yaw_deg: 0.0}
+        - {episode_id:    852, x:     2.7592, z:     1.6882, yaw_deg: 0.0}
+        - {episode_id:    857, x:     1.9188, z:    28.6974, yaw_deg: 0.0}
+        - {episode_id:    880, x:     4.5201, z:     6.8292, yaw_deg: 0.0}
+        - {episode_id:    887, x:     3.4344, z:     7.6022, yaw_deg: 0.0}
+        - {episode_id:    889, x:     0.5280, z:   -11.3800, yaw_deg: 0.0}
+        - {episode_id:    891, x:     0.5280, z:   -11.3800, yaw_deg: 0.0}
+        - {episode_id:    904, x:    30.1878, z:     0.7609, yaw_deg: 0.0}
+        - {episode_id:    906, x:    30.1878, z:     0.7609, yaw_deg: 0.0}
+        - {episode_id:    925, x:    -2.1170, z:     4.5329, yaw_deg: 0.0}
+        - {episode_id:    927, x:    -2.1170, z:     4.5329, yaw_deg: 0.0}
+        - {episode_id:    931, x:     3.0676, z:     6.7571, yaw_deg: 0.0}
+        - {episode_id:    933, x:     3.0676, z:     6.7571, yaw_deg: 0.0}
+        - {episode_id:    940, x:    -0.3159, z:     0.4658, yaw_deg: 0.0}
+        - {episode_id:    951, x:    -0.0774, z:     0.2795, yaw_deg: 0.0}
+        - {episode_id:    952, x:    -5.9096, z:   -14.5751, yaw_deg: 0.0}
+        - {episode_id:    956, x:     3.9872, z:    -3.6539, yaw_deg: 0.0}
+        - {episode_id:    970, x:     0.5182, z:     6.4420, yaw_deg: 0.0}
+        - {episode_id:    971, x:     0.5182, z:     6.4420, yaw_deg: 0.0}
+        - {episode_id:    976, x:     0.1419, z:   -10.4357, yaw_deg: 0.0}
+        - {episode_id:    977, x:     0.1419, z:   -10.4357, yaw_deg: 0.0}
+        - {episode_id:    978, x:     0.1419, z:   -10.4357, yaw_deg: 0.0}
+        - {episode_id:    981, x:     2.2934, z:     4.4853, yaw_deg: 0.0}
+        - {episode_id:    982, x:    -4.3396, z:    -0.7363, yaw_deg: 0.0}
+        - {episode_id:    984, x:    -4.3396, z:    -0.7363, yaw_deg: 0.0}
+        - {episode_id:    985, x:     0.0153, z:    12.1108, yaw_deg: 0.0}
+        - {episode_id:    987, x:     0.0153, z:    12.1108, yaw_deg: 0.0}
+        - {episode_id:    988, x:    -9.9932, z:     6.8312, yaw_deg: 0.0}
+        - {episode_id:    990, x:    -9.9932, z:     6.8312, yaw_deg: 0.0}
+        - {episode_id:    995, x:     0.1996, z:   -12.4524, yaw_deg: 0.0}
+        - {episode_id:   1002, x:     1.9045, z:    -4.3038, yaw_deg: 0.0}
+        - {episode_id:   1009, x:     0.5252, z:    -6.5396, yaw_deg: 0.0}
+        - {episode_id:   1010, x:     0.5252, z:    -6.5396, yaw_deg: 0.0}
+        - {episode_id:   1012, x:     2.1366, z:    -6.1489, yaw_deg: 0.0}
+        - {episode_id:   1018, x:     2.5925, z:    -4.1552, yaw_deg: 0.0}
+        - {episode_id:   1019, x:     2.5925, z:    -4.1552, yaw_deg: 0.0}
+        - {episode_id:   1030, x:    17.1765, z:     0.4046, yaw_deg: 0.0}
+        - {episode_id:   1038, x:     2.4747, z:   -11.2977, yaw_deg: 0.0}
+        - {episode_id:   1043, x:     0.1645, z:   -16.7806, yaw_deg: 0.0}
+        - {episode_id:   1048, x:    17.3930, z:     2.0954, yaw_deg: 0.0}
+        - {episode_id:   1064, x:    -0.5039, z:    -5.2103, yaw_deg: 0.0}
+        - {episode_id:   1065, x:    -0.5039, z:    -5.2103, yaw_deg: 0.0}
+        - {episode_id:   1067, x:     1.3147, z:     3.1800, yaw_deg: 0.0}
+        - {episode_id:   1068, x:     1.3147, z:     3.1800, yaw_deg: 0.0}
+        - {episode_id:   1072, x:     0.2660, z:    -1.2377, yaw_deg: 0.0}
+        - {episode_id:   1076, x:     2.5923, z:    -4.1425, yaw_deg: 0.0}
+        - {episode_id:   1082, x:     4.2964, z:    -2.2568, yaw_deg: 0.0}
+        - {episode_id:   1083, x:     4.2964, z:    -2.2568, yaw_deg: 0.0}
+        - {episode_id:   1089, x:    -4.0284, z:    -0.7813, yaw_deg: 0.0}
+        - {episode_id:   1090, x:    -1.8984, z:     4.8053, yaw_deg: 0.0}
+        - {episode_id:   1093, x:   -10.7398, z:    12.8648, yaw_deg: 0.0}
+        - {episode_id:   1094, x:   -10.7398, z:    12.8648, yaw_deg: 0.0}
+        - {episode_id:   1095, x:   -10.7398, z:    12.8648, yaw_deg: 0.0}
+        - {episode_id:   1106, x:     0.5535, z:    -7.9607, yaw_deg: 0.0}
+        - {episode_id:   1107, x:     0.5535, z:    -7.9607, yaw_deg: 0.0}
+        - {episode_id:   1110, x:     4.1411, z:    -0.1989, yaw_deg: 0.0}
+        - {episode_id:   1113, x:     2.5040, z:    -2.0063, yaw_deg: 0.0}
+        - {episode_id:   1114, x:    -1.7625, z:   -13.5469, yaw_deg: 0.0}
+        - {episode_id:   1115, x:    -1.7625, z:   -13.5469, yaw_deg: 0.0}
+        - {episode_id:   1130, x:    -6.1908, z:   -14.4700, yaw_deg: 0.0}
+        - {episode_id:   1133, x:    31.2071, z:     3.5717, yaw_deg: 0.0}
+        - {episode_id:   1142, x:     1.1763, z:    12.8920, yaw_deg: 0.0}
+        - {episode_id:   1146, x:    -5.7968, z:    -0.5707, yaw_deg: 0.0}
+        - {episode_id:   1148, x:    -1.7440, z:     5.1576, yaw_deg: 0.0}
+        - {episode_id:   1152, x:     2.1770, z:    -4.6871, yaw_deg: 0.0}
+        - {episode_id:   1159, x:     1.2472, z:     6.4888, yaw_deg: 0.0}
+        - {episode_id:   1161, x:     1.2472, z:     6.4888, yaw_deg: 0.0}
+        - {episode_id:   1162, x:    28.8135, z:   -12.2458, yaw_deg: 0.0}
+        - {episode_id:   1164, x:    28.8135, z:   -12.2458, yaw_deg: 0.0}
+        - {episode_id:   1165, x:     6.1996, z:    -2.4235, yaw_deg: 0.0}
+        - {episode_id:   1173, x:     2.2817, z:    -2.6420, yaw_deg: 0.0}
+        - {episode_id:   1179, x:     1.6702, z:     7.2204, yaw_deg: 0.0}
+        - {episode_id:   1180, x:     0.1608, z:   -10.4472, yaw_deg: 0.0}
+        - {episode_id:   1190, x:    11.4290, z:     6.7694, yaw_deg: 0.0}
+        - {episode_id:   1191, x:    11.4290, z:     6.7694, yaw_deg: 0.0}
+        - {episode_id:   1192, x:    29.1837, z:    -7.1781, yaw_deg: 0.0}
+        - {episode_id:   1202, x:    -1.9431, z:   -12.2001, yaw_deg: 0.0}
+        - {episode_id:   1204, x:     0.8757, z:     2.0249, yaw_deg: 0.0}
+        - {episode_id:   1215, x:    16.5772, z:     1.1464, yaw_deg: 0.0}
+        - {episode_id:   1221, x:     0.0131, z:    -1.1965, yaw_deg: 0.0}
+        - {episode_id:   1223, x:     3.1036, z:    23.4422, yaw_deg: 0.0}
+        - {episode_id:   1224, x:     3.1036, z:    23.4422, yaw_deg: 0.0}
+        - {episode_id:   1229, x:     3.8069, z:     6.7383, yaw_deg: 0.0}
+        - {episode_id:   1231, x:     4.5507, z:     7.9943, yaw_deg: 0.0}
+        - {episode_id:   1232, x:     4.5507, z:     7.9943, yaw_deg: 0.0}
+        - {episode_id:   1239, x:    31.0187, z:     0.9765, yaw_deg: 0.0}
+        - {episode_id:   1240, x:     3.7012, z:    -3.5973, yaw_deg: 0.0}
+        - {episode_id:   1249, x:    11.3684, z:    -1.0888, yaw_deg: 0.0}
+        - {episode_id:   1254, x:    -3.0921, z:    15.6566, yaw_deg: 0.0}
+        - {episode_id:   1255, x:    14.7958, z:     0.7027, yaw_deg: 0.0}
+        - {episode_id:   1258, x:     0.6385, z:     0.5316, yaw_deg: 0.0}
+        - {episode_id:   1264, x:     7.5838, z:     1.3577, yaw_deg: 0.0}
+        - {episode_id:   1265, x:     7.5838, z:     1.3577, yaw_deg: 0.0}
+        - {episode_id:   1268, x:    -3.2403, z:    -0.7330, yaw_deg: 0.0}
+        - {episode_id:   1269, x:    -3.2403, z:    -0.7330, yaw_deg: 0.0}
+        - {episode_id:   1271, x:     2.1303, z:    -3.8017, yaw_deg: 0.0}
+        - {episode_id:   1278, x:    -2.0550, z:    -6.1520, yaw_deg: 0.0}
+        - {episode_id:   1279, x:     2.0606, z:    -6.2090, yaw_deg: 0.0}
+        - {episode_id:   1280, x:     2.0606, z:    -6.2090, yaw_deg: 0.0}
+        - {episode_id:   1282, x:     2.0982, z:    -5.0402, yaw_deg: 0.0}
+        - {episode_id:   1308, x:    -2.7725, z:    -3.6440, yaw_deg: 0.0}
+        - {episode_id:   1313, x:     1.3932, z:    -3.0618, yaw_deg: 0.0}
+        - {episode_id:   1315, x:     8.7073, z:     7.8003, yaw_deg: 0.0}
+        - {episode_id:   1319, x:    -1.9397, z:     4.3555, yaw_deg: 0.0}
+        - {episode_id:   1320, x:    -1.9397, z:     4.3555, yaw_deg: 0.0}
+        - {episode_id:   1327, x:     0.1302, z:   -12.5119, yaw_deg: 0.0}
+        - {episode_id:   1328, x:     0.1302, z:   -12.5119, yaw_deg: 0.0}
+        - {episode_id:   1329, x:     0.1302, z:   -12.5119, yaw_deg: 0.0}
+        - {episode_id:   1330, x:     0.0516, z:    -1.1529, yaw_deg: 0.0}
+        - {episode_id:   1339, x:    15.0817, z:     0.4697, yaw_deg: 0.0}
+        - {episode_id:   1340, x:    15.0817, z:     0.4697, yaw_deg: 0.0}
+        - {episode_id:   1342, x:    -0.4538, z:     0.4963, yaw_deg: 0.0}
+        - {episode_id:   1346, x:    -0.3499, z:   -10.8908, yaw_deg: 0.0}
+        - {episode_id:   1348, x:    -5.5626, z:    -0.7009, yaw_deg: 0.0}
+        - {episode_id:   1349, x:    -5.5626, z:    -0.7009, yaw_deg: 0.0}
+        - {episode_id:   1350, x:    -5.5626, z:    -0.7009, yaw_deg: 0.0}
+        - {episode_id:   1364, x:     2.7134, z:    -3.9844, yaw_deg: 0.0}
+        - {episode_id:   1365, x:     2.7134, z:    -3.9844, yaw_deg: 0.0}
+        - {episode_id:   1366, x:     0.8088, z:    -7.6836, yaw_deg: 0.0}
+        - {episode_id:   1372, x:    -3.1016, z:     1.0626, yaw_deg: 0.0}
+        - {episode_id:   1373, x:    -3.1016, z:     1.0626, yaw_deg: 0.0}
+        - {episode_id:   1374, x:    -3.1016, z:     1.0626, yaw_deg: 0.0}
+        - {episode_id:   1380, x:    -5.8642, z:    -0.6487, yaw_deg: 0.0}
+        - {episode_id:   1381, x:    21.6447, z:    -1.6192, yaw_deg: 0.0}
+        - {episode_id:   1383, x:    21.6447, z:    -1.6192, yaw_deg: 0.0}
+        - {episode_id:   1387, x:    12.3185, z:    -4.0636, yaw_deg: 0.0}
+        - {episode_id:   1397, x:    -3.1982, z:   -17.0336, yaw_deg: 0.0}
+        - {episode_id:   1399, x:     2.6023, z:    -3.7800, yaw_deg: 0.0}
+        - {episode_id:   1401, x:     2.6023, z:    -3.7800, yaw_deg: 0.0}
+        - {episode_id:   1405, x:     2.4692, z:    -3.3614, yaw_deg: 0.0}
+        - {episode_id:   1407, x:     2.4692, z:    -3.3614, yaw_deg: 0.0}
+        - {episode_id:   1410, x:    -2.4074, z:    -6.2482, yaw_deg: 0.0}
+        - {episode_id:   1411, x:    -0.1281, z:     0.0456, yaw_deg: 0.0}
+        - {episode_id:   1417, x:     2.4324, z:    -5.2356, yaw_deg: 0.0}
+        - {episode_id:   1423, x:     1.3998, z:    -3.0375, yaw_deg: 0.0}
+        - {episode_id:   1429, x:    -0.5205, z:    -2.5762, yaw_deg: 0.0}
+        - {episode_id:   1444, x:    -3.3258, z:    16.9791, yaw_deg: 0.0}
+        - {episode_id:   1446, x:    -3.3258, z:    16.9791, yaw_deg: 0.0}
+        - {episode_id:   1449, x:     1.2685, z:    -3.0257, yaw_deg: 0.0}
+        - {episode_id:   1450, x:     2.5368, z:     1.3767, yaw_deg: 0.0}
+        - {episode_id:   1457, x:     0.1899, z:     0.5677, yaw_deg: 0.0}
+        - {episode_id:   1458, x:     0.1899, z:     0.5677, yaw_deg: 0.0}
+        - {episode_id:   1462, x:     0.2150, z:   -13.3790, yaw_deg: 0.0}
+        - {episode_id:   1464, x:     0.2150, z:   -13.3790, yaw_deg: 0.0}
+        - {episode_id:   1470, x:     0.1794, z:    -0.1856, yaw_deg: 0.0}
+        - {episode_id:   1472, x:    15.2471, z:     9.7097, yaw_deg: 0.0}
+        - {episode_id:   1473, x:    15.2471, z:     9.7097, yaw_deg: 0.0}
+        - {episode_id:   1474, x:    12.6368, z:     0.3792, yaw_deg: 0.0}
+        - {episode_id:   1484, x:     7.0691, z:     0.3152, yaw_deg: 0.0}
+        - {episode_id:   1486, x:     6.2217, z:    -2.8985, yaw_deg: 0.0}
+        - {episode_id:   1490, x:     0.9459, z:     2.3735, yaw_deg: 0.0}
+        - {episode_id:   1491, x:     0.9459, z:     2.3735, yaw_deg: 0.0}
+        - {episode_id:   1500, x:     5.9960, z:     0.8575, yaw_deg: 0.0}
+        - {episode_id:   1511, x:     2.5547, z:     1.3682, yaw_deg: 0.0}
+        - {episode_id:   1515, x:    -2.1829, z:    10.2393, yaw_deg: 0.0}
+        - {episode_id:   1527, x:     7.4695, z:     1.3300, yaw_deg: 0.0}
+        - {episode_id:   1528, x:    -1.9397, z:     4.3555, yaw_deg: 0.0}
+        - {episode_id:   1536, x:     0.9114, z:     8.1700, yaw_deg: 0.0}
+        - {episode_id:   1545, x:   -11.9090, z:    14.8166, yaw_deg: 0.0}
+        - {episode_id:   1547, x:     0.7655, z:     0.5913, yaw_deg: 0.0}
+        - {episode_id:   1561, x:     0.7246, z:     6.0623, yaw_deg: 0.0}
+        - {episode_id:   1562, x:     0.7246, z:     6.0623, yaw_deg: 0.0}
+        - {episode_id:   1565, x:     7.8375, z:     2.5703, yaw_deg: 0.0}
+        - {episode_id:   1568, x:    -1.6755, z:     4.3497, yaw_deg: 0.0}
+        - {episode_id:   1569, x:    -1.6755, z:     4.3497, yaw_deg: 0.0}
+        - {episode_id:   1571, x:    -1.6007, z:     3.0005, yaw_deg: 0.0}
+        - {episode_id:   1575, x:    14.8895, z:     0.5911, yaw_deg: 0.0}
+        - {episode_id:   1576, x:    -0.4027, z:     0.1814, yaw_deg: 0.0}
+        - {episode_id:   1579, x:    18.0464, z:    -0.7662, yaw_deg: 0.0}
+        - {episode_id:   1585, x:     8.5975, z:    -3.4512, yaw_deg: 0.0}
+        - {episode_id:   1586, x:     8.5975, z:    -3.4512, yaw_deg: 0.0}
+        - {episode_id:   1591, x:     1.7726, z:     3.2418, yaw_deg: 0.0}
+        - {episode_id:   1592, x:     1.7726, z:     3.2418, yaw_deg: 0.0}
+        - {episode_id:   1599, x:    -1.6261, z:    -1.2200, yaw_deg: 0.0}
+        - {episode_id:   1603, x:    -0.0024, z:     0.1540, yaw_deg: 0.0}
+        - {episode_id:   1606, x:    -4.8489, z:     0.5320, yaw_deg: 0.0}
+        - {episode_id:   1618, x:    18.2624, z:     0.6164, yaw_deg: 0.0}
+        - {episode_id:   1621, x:     8.9505, z:     1.6603, yaw_deg: 0.0}
+        - {episode_id:   1622, x:     8.9505, z:     1.6603, yaw_deg: 0.0}
+        - {episode_id:   1623, x:     8.9505, z:     1.6603, yaw_deg: 0.0}
+        - {episode_id:   1629, x:    -1.8645, z:     4.4036, yaw_deg: 0.0}
+        - {episode_id:   1630, x:     1.8034, z:     9.3392, yaw_deg: 0.0}
+        - {episode_id:   1632, x:     1.8034, z:     9.3392, yaw_deg: 0.0}
+        - {episode_id:   1634, x:    -5.7457, z:    -0.5707, yaw_deg: 0.0}
+        - {episode_id:   1639, x:    -1.9408, z:    -1.2205, yaw_deg: 0.0}
+        - {episode_id:   1641, x:    -1.9408, z:    -1.2205, yaw_deg: 0.0}
+        - {episode_id:   1643, x:     2.3944, z:    -7.4052, yaw_deg: 0.0}
+        - {episode_id:   1647, x:     3.9287, z:    -3.7352, yaw_deg: 0.0}
+        - {episode_id:   1651, x:    28.8138, z:    -1.9229, yaw_deg: 0.0}
+        - {episode_id:   1655, x:     2.4131, z:    -7.3915, yaw_deg: 0.0}
+        - {episode_id:   1656, x:     2.4131, z:    -7.3915, yaw_deg: 0.0}
+        - {episode_id:   1660, x:     1.8191, z:    -6.2737, yaw_deg: 0.0}
+        - {episode_id:   1661, x:     1.8191, z:    -6.2737, yaw_deg: 0.0}
+        - {episode_id:   1664, x:    -4.6311, z:    -0.8651, yaw_deg: 0.0}
+        - {episode_id:   1667, x:     0.0661, z:    -2.0849, yaw_deg: 0.0}
+        - {episode_id:   1669, x:    -4.8187, z:    -0.7508, yaw_deg: 0.0}
+        - {episode_id:   1675, x:    -0.1554, z:     4.8982, yaw_deg: 0.0}
+        - {episode_id:   1676, x:    -0.1554, z:     4.8982, yaw_deg: 0.0}
+        - {episode_id:   1687, x:     0.6134, z:     0.6101, yaw_deg: 0.0}
+        - {episode_id:   1699, x:    -0.5741, z:   -11.1200, yaw_deg: 0.0}
+        - {episode_id:   1700, x:    -0.5741, z:   -11.1200, yaw_deg: 0.0}
+        - {episode_id:   1702, x:    -0.3976, z:     0.3814, yaw_deg: 0.0}
+        - {episode_id:   1703, x:    -0.3976, z:     0.3814, yaw_deg: 0.0}
+        - {episode_id:   1709, x:     2.1875, z:    -4.5790, yaw_deg: 0.0}
+        - {episode_id:   1710, x:     2.1875, z:    -4.5790, yaw_deg: 0.0}
+        - {episode_id:   1711, x:     2.6612, z:    -3.2451, yaw_deg: 0.0}
+        - {episode_id:   1713, x:     2.6612, z:    -3.2451, yaw_deg: 0.0}
+        - {episode_id:   1717, x:    -0.0665, z:   -11.3725, yaw_deg: 0.0}
+        - {episode_id:   1718, x:    -0.0665, z:   -11.3725, yaw_deg: 0.0}
+        - {episode_id:   1723, x:    -8.9330, z:   -12.8600, yaw_deg: 0.0}
+        - {episode_id:   1725, x:    -8.9330, z:   -12.8600, yaw_deg: 0.0}
+        - {episode_id:   1746, x:     3.5760, z:     4.2173, yaw_deg: 0.0}
+        - {episode_id:   1748, x:     0.6321, z:     0.5945, yaw_deg: 0.0}
+        - {episode_id:   1760, x:    -0.9525, z:     4.0424, yaw_deg: 0.0}
+        - {episode_id:   1777, x:     2.4858, z:    -0.0521, yaw_deg: 0.0}
+        - {episode_id:   1784, x:    -6.1524, z:   -16.8300, yaw_deg: 0.0}
+        - {episode_id:   1788, x:     2.1176, z:    -3.9438, yaw_deg: 0.0}
+        - {episode_id:   1790, x:     1.9870, z:    -3.0387, yaw_deg: 0.0}
+        - {episode_id:   1795, x:    -1.6388, z:     2.7677, yaw_deg: 0.0}
+        - {episode_id:   1797, x:    -1.6388, z:     2.7677, yaw_deg: 0.0}
+        - {episode_id:   1801, x:    17.7391, z:    -0.4986, yaw_deg: 0.0}
+        - {episode_id:   1802, x:    17.7391, z:    -0.4986, yaw_deg: 0.0}
+        - {episode_id:   1804, x:     0.0580, z:   -16.3460, yaw_deg: 0.0}
+        - {episode_id:   1806, x:     0.0580, z:   -16.3460, yaw_deg: 0.0}
+        - {episode_id:   1812, x:    -0.0435, z:     5.5063, yaw_deg: 0.0}
+        - {episode_id:   1822, x:     0.1761, z:    -1.2533, yaw_deg: 0.0}
+        - {episode_id:   1831, x:     1.8086, z:    -3.5463, yaw_deg: 0.0}
+        - {episode_id:   1837, x:    22.1803, z:     0.2244, yaw_deg: 0.0}
+        - {episode_id:   1838, x:    22.1803, z:     0.2244, yaw_deg: 0.0}
+        - {episode_id:   1839, x:    22.1803, z:     0.2244, yaw_deg: 0.0}
+
+STATIC_PREFIX:
+    PREFIX: "There may be an obstacle blocking your path. If blocked, carefully turn and navigate around it, then continue: "
+
+TASK_CONFIG:
+    ENVIRONMENT:
+        MAX_EPISODE_STEPS: 1000
+    DATASET:
+        TYPE: VLN-CE-v1
+        SPLIT: val_unseen
+        DATA_PATH: data/datasets/R2R_VLNCE_v1-3_preprocessed/{split}/{split}.json.gz
+        SCENES_DIR: data/scene_datasets/
+        EPISODES_ALLOWED: [
+          "20", "21", "24", "31", "33", "34", "43", "44", "46", "61", "67", "71", "79", "88", "92", "97", "98", "103", "104", "110",
+          "111", "117", "143", "153", "159", "167", "171", "172", "173", "199", "202", "208", "212", "214", "222", "228", "229", "230", "232", "233",
+          "244", "256", "258", "260", "264", "272", "277", "281", "282", "283", "284", "285", "286", "287", "288", "290", "295", "300", "305", "306",
+          "308", "309", "310", "313", "314", "315", "320", "325", "331", "332", "335", "336", "337", "338", "341", "342", "345", "346", "347", "348",
+          "351", "356", "375", "377", "378", "389", "390", "395", "403", "406", "408", "410", "422", "425", "451", "456", "460", "461", "462", "472",
+          "473", "480", "484", "490", "496", "510", "511", "512", "518", "519", "526", "529", "530", "534", "538", "548", "565", "577", "581", "588",
+          "592", "593", "599", "608", "614", "615", "620", "623", "644", "652", "654", "658", "660", "661", "663", "677", "682", "687", "689", "690",
+          "695", "700", "701", "706", "714", "721", "722", "725", "730", "732", "745", "749", "752", "753", "763", "765", "772", "781", "783", "784",
+          "785", "787", "788", "789", "791", "794", "801", "802", "804", "805", "809", "810", "815", "832", "841", "844", "845", "849", "850", "851",
+          "852", "857", "880", "887", "889", "891", "904", "906", "925", "927", "931", "933", "940", "951", "952", "956", "970", "971", "976", "977",
+          "978", "981", "982", "984", "985", "987", "988", "990", "995", "1002", "1009", "1010", "1012", "1018", "1019", "1030", "1038", "1043", "1048", "1064",
+          "1065", "1067", "1068", "1072", "1076", "1082", "1083", "1089", "1090", "1093", "1094", "1095", "1106", "1107", "1110", "1113", "1114", "1115", "1130", "1133",
+          "1142", "1146", "1148", "1152", "1159", "1161", "1162", "1164", "1165", "1173", "1179", "1180", "1190", "1191", "1192", "1202", "1204", "1215", "1221", "1223",
+          "1224", "1229", "1231", "1232", "1239", "1240", "1249", "1254", "1255", "1258", "1264", "1265", "1268", "1269", "1271", "1278", "1279", "1280", "1282", "1308",
+          "1313", "1315", "1319", "1320", "1327", "1328", "1329", "1330", "1339", "1340", "1342", "1346", "1348", "1349", "1350", "1364", "1365", "1366", "1372", "1373",
+          "1374", "1380", "1381", "1383", "1387", "1397", "1399", "1401", "1405", "1407", "1410", "1411", "1417", "1423", "1429", "1444", "1446", "1449", "1450", "1457",
+          "1458", "1462", "1464", "1470", "1472", "1473", "1474", "1484", "1486", "1490", "1491", "1500", "1511", "1515", "1527", "1528", "1536", "1545", "1547", "1561",
+          "1562", "1565", "1568", "1569", "1571", "1575", "1576", "1579", "1585", "1586", "1591", "1592", "1599", "1603", "1606", "1618", "1621", "1622", "1623", "1629",
+          "1630", "1632", "1634", "1639", "1641", "1643", "1647", "1651", "1655", "1656", "1660", "1661", "1664", "1667", "1669", "1675", "1676", "1687", "1699", "1700",
+          "1702", "1703", "1709", "1710", "1711", "1713", "1717", "1718", "1723", "1725", "1746", "1748", "1760", "1777", "1784", "1788", "1790", "1795", "1797", "1801",
+          "1802", "1804", "1806", "1812", "1822", "1831", "1837", "1838", "1839"
+        ]
+    TASK:
+        NDTW:
+            GT_PATH: data/datasets/R2R_VLNCE_v1-3_preprocessed/{split}/{split}_gt.json.gz

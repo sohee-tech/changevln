@@ -12,7 +12,7 @@ The project was developed as an undergraduate research project and was accepted 
   <img src="figures/environment_change.jpg" alt="ChangeVLN changed-environment example" width="900">
 </p>
 
-<p align="center"><em>The instruction, start, and goal stay fixed while an inserted obstacle blocks the original route and forces a detour.</em></p>
+<p align="center"><em>The instruction, start, and goal stay fixed while an inserted obstacle blocks the original route and forces a detour. Figure extracted from the ChangeVLN IROS 2026 Workshop poster.</em></p>
 
 ---
 
@@ -31,6 +31,8 @@ ChangeVLN introduces controlled environmental changes and evaluates whether a VL
 <p align="center">
   <img src="figures/benchmark_overview.jpg" alt="ChangeVLN benchmark overview" width="900">
 </p>
+
+<p align="center"><em>Benchmark overview and changed-environment evaluation design. Figure extracted from the ChangeVLN IROS 2026 Workshop poster.</em></p>
 
 The benchmark is built on a **NaVILA-based navigation pipeline in Habitat**.
 
@@ -54,7 +56,7 @@ A total of **500 episodes** were used in the final evaluation.
   <img src="figures/results_summary.jpg" alt="ChangeVLN experimental results" width="900">
 </p>
 
-<p align="center"><em>Summary of the final comparison between NaVILA and the obstacle-aware instruction setting.</em></p>
+<p align="center"><em>Summary of the final comparison between NaVILA and the obstacle-aware instruction setting. Figure extracted from the ChangeVLN IROS 2026 Workshop poster.</em></p>
 
 ---
 
